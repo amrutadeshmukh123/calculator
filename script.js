@@ -1,5 +1,6 @@
 var screen=document.querySelector('.calculator .screen input')
 var btn=document.querySelectorAll('.calculator .operation .action button')
+var btn2= document.querySelectorAll('.calculator .operation .numbers button')
 
 btn.forEach((button)=>{
     button.addEventListener('click',()=>{
@@ -28,11 +29,22 @@ var tanButton=document.querySelector('.calculator .operation .numbers .tan')
     let result=eval(expression)
     screen.value=result
  })
-tanButton.addEventListener('click',()=>{
-    let expression=screen.value-1
-    let result=eval(expression)
-    screen.value=result
-})
+
+// tanButton.addEventListener('click',()=>{
+//     let expression=screen.value-1
+//     let result=eval(expression)
+//     screen.value=result
+// })
+
+tanButton.addEventListener('click', () => {
+    screen.value = screen.value.slice(0, -1);
+});
+
+
+
+
+
+
 
 
 

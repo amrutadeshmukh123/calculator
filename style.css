@@ -31,14 +31,27 @@ body{
 }
 .action{
     width: 100%;
-    margin-top: 1.7em;
+    margin-top: 1.7em !important;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-direction: row;
+    margin: 0px auto;
+}
+.numbers{
+    width: 100%;
+    margin-top: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 8px;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .numbers button{
-    width: 120px;
+    width: 115px;
     height: 50px;
     font-size: 22px;
     border: 1px solid wheat;
@@ -66,4 +79,70 @@ body{
 }
 .numbers button.equal{
     background-color: lightseagreen;
+}
+
+
+
+/* Tablet View (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .calculator {
+        width: 60%;
+        height: 65vh;
+    }
+    .screen input {
+        height: 60px;
+        font-size: 30px;
+    }
+    .numbers button, .action button {
+        width: 100px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+/* Mobile View (Below 768px) */
+@media screen and (max-width: 768px) {
+    .calculator {
+        width: 30%;
+        height: auto;
+        padding: 15px;
+    }
+    .screen input {
+        height: 55px;
+        font-size: 28px;
+    }
+    .action {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .numbers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .numbers button, .action button {
+        width: 80px;
+        height: 40px;
+        font-size: 18px;
+        margin: 4px;
+    }
+}
+
+/* Small Mobile View (Below 480px) */
+@media screen and (max-width: 480px) {
+    .calculator {
+        width: 95%;
+        height: auto;
+        padding: 10px;
+    }
+    .screen input {
+        height: 50px;
+        font-size: 24px;
+    }
+    .numbers button, .action button {
+        width: 70px;
+        height: 35px;
+        font-size: 16px;
+        margin: 3px;
+    }
 }
